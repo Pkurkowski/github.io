@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Add styling for the blog tiles */
+        .blog-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .blog-tile {
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blog-tile h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,15 +50,27 @@
     </nav>
 </header>
 
-<section>
-    <ul>
-        <li><a href="post1.html">eCommerce Analytics Pipeline: Building Real-Time Insights</a></li>
-        <li><a href="post2.html">Graph Databases with Neo4j: Optimizing Customer Segmentation</a></li>
-        <li><a href="post3.html">Data Warehousing & BI Dashboards for eCommerce</a></li>
-        <li><a href="post4.html">Data Modeling for Product Analytics</a></li>
-    </ul>
+<section class="blog-grid">
+    <!-- Tile for Blog Post 1 -->
+    <a href="post1.html" class="blog-tile" style="background-image: url('../images/mountain_tile_1.jpg');">
+        <h3>eCommerce Analytics Pipeline</h3>
+    </a>
+
+    <!-- Tile for Blog Post 2 -->
+    <a href="post2.html" class="blog-tile" style="background-image: url('../images/mountain_tile_2.jpg');">
+        <h3>Graph Databases with Neo4j</h3>
+    </a>
+
+    <!-- Tile for Blog Post 3 -->
+    <a href="post3.html" class="blog-tile" style="background-image: url('../images/mountain_tile_3.jpg');">
+        <h3>Data Warehousing & BI Dashboards</h3>
+    </a>
+
+    <!-- Tile for Blog Post 4 -->
+    <a href="post4.html" class="blog-tile" style="background-image: url('../images/mountain_tile_4.jpg');">
+        <h3>Data Modeling for Product Analytics</h3>
+    </a>
 </section>
 
 </body>
 </html>
-
