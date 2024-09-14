@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Add styling for the project tiles */
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .project-tile {
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-tile h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,15 +50,27 @@
     </nav>
 </header>
 
-<section>
-    <ul>
-        <li><a href="https://github.com/Pkurkowski/ecommerce-analytics-pipeline">eCommerce Analytics Pipeline</a></li>
-        <li><a href="https://github.com/Pkurkowski/Graph-Database-with-Neo4j">Graph Database with Neo4j</a></li>
-        <li><a href="https://github.com/Pkurkowski/data-warehousing-and-BI-dashboard">Data Warehousing & BI Dashboard</a></li>
-        <li><a href="https://github.com/Pkurkowski/data-modeling">Data Modeling for Product Analytics</a></li>
-    </ul>
+<section class="project-grid">
+    <!-- Tile for Project 1 -->
+    <a href="https://github.com/username/ecommerce-analytics-pipeline" class="project-tile" style="background-image: url('images/project_tile_1.jpg');">
+        <h3>eCommerce Analytics Pipeline</h3>
+    </a>
+
+    <!-- Tile for Project 2 -->
+    <a href="https://github.com/username/graph-database-with-neo4j" class="project-tile" style="background-image: url('images/project_tile_2.jpg');">
+        <h3>Graph Database with Neo4j</h3>
+    </a>
+
+    <!-- Tile for Project 3 -->
+    <a href="https://github.com/username/data-warehousing-and-bi-dashboard" class="project-tile" style="background-image: url('images/project_tile_3.jpg');">
+        <h3>Data Warehousing & BI Dashboard</h3>
+    </a>
+
+    <!-- Tile for Project 4 -->
+    <a href="https://github.com/username/data-modeling" class="project-tile" style="background-image: url('images/project_tile_4.jpg');">
+        <h3>Data Modeling for Product Analytics</h3>
+    </a>
 </section>
 
 </body>
 </html>
-
