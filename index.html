@@ -24,10 +24,11 @@
             padding: 0;
             overflow: hidden;
             background-color: rgba(0, 0, 0, 0.8); /* Restore background transparency */
+            text-align: center;
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin-right: 20px;
         }
 
@@ -35,6 +36,11 @@
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50; /* Add hover effect */
         }
 
         /* Hero Section */
@@ -111,9 +117,11 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog/post1.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
