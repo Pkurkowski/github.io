@@ -61,12 +61,11 @@
             color: black; /* Black text for code */
             padding: 10px;
             border-radius: 4px;
-            overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
+            overflow-x: auto; /* Allow horizontal scrolling for wide code */
             font-family: 'Courier New', monospace;
             font-size: 0.95rem;
-            max-width: 100%; /* Ensure code block width fits within the page */
-            white-space: pre-wrap; /* Preserve spaces and wrap lines */
-            word-wrap: break-word; /* Break long words if necessary */
+            max-width: 100%; /* Ensure the code block width fits within the page */
+            white-space: nowrap; /* Prevent wrapping of code */
             text-align: left; /* Left align the code text */
         }
 
