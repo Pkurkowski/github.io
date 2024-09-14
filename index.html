@@ -3,100 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter R. Kurkowski's Portfolio</title>
+    <title>Peter R. Kurkowski - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/magical_forest_scene.jpg');
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-        }
-        nav ul li {
-            list-style: none;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 0;
-            background-color: rgba(0, 0, 0, 0.7); /* Gray background */
-            color: white;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-        }
-        .riddle-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .riddle-section button {
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .riddle-section #answer {
-            margin-top: 20px;
-            font-size: 18px;
-            display: none;
-            color: white;
-        }
-        .riddle-container {
-            background-color: rgba(0, 0, 0, 0.6); /* Gray background for the riddle box */
-            padding: 30px;
-            border-radius: 10px;
-            width: 70%;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog/index.html">Blogs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </nav>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog/index.html">Blogs</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Hero Section with Gray Background -->
-    <div class="hero">
-        <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
-        <p>Technical Product Marketing, Analytics, and Data-Driven Solutions.</p>
-    </div>
+<section class="hero">
+  <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
+  <h2>Technical Product Marketing, Analytics, and Data-Driven Solutions.</h2>
+</section>
 
-    <!-- Riddle Section -->
-    <div class="riddle-container">
-        <div class="riddle-section">
-            <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
-            <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
-            <p id="answer">Focus, guided by the right expertise.</p>
-        </div>
-    </div>
+<section class="riddle-section">
+  <div class="riddle-box">
+    <p class="riddle-text">"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+    <button id="revealAnswerBtn">Reveal the Answer</button>
+    <p id="riddleAnswer" class="hidden">Focus, guided by the right expertise.</p>
+  </div>
+</section>
+
+<script>
+    document.getElementById('revealAnswerBtn').addEventListener('click', function() {
+        document.getElementById('riddleAnswer').classList.remove('hidden');
+    });
+</script>
 
 </body>
 </html>
