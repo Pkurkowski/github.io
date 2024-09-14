@@ -85,10 +85,13 @@ With Neo4j, this process becomes much simpler:
 Define the relationships between entities (e.g., customers, products).
 Use Cypher to create fast, efficient queries that can explore multiple levels of relationships.
 
+ <h3>Example Cypher Query:</h3>
+        <pre><code>
 MATCH (customer:Customer)-[:PURCHASED]->(product:Product)
 RETURN product.name AS ProductName, COUNT(product) AS PurchasedCount
 ORDER BY PurchasedCount DESC
 LIMIT 5;
+        </code></pre>
 
 This query quickly returns the top 5 most-purchased products by a customer without needing complex joins. For developers, the ease of use, performance, and flexibility of Neo4j make it a powerful tool in their stack.
 
