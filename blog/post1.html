@@ -61,12 +61,12 @@
             color: black; /* Black text for code */
             padding: 10px;
             border-radius: 4px;
-            overflow-x: auto; /* Allow horizontal scrolling for wide code */
+            white-space: pre-wrap; /* Wrap long lines */
+            word-wrap: break-word; /* Break long words */
             font-family: 'Courier New', monospace;
             font-size: 0.95rem;
             max-width: 100%; /* Ensure the code block width fits within the page */
-            white-space: nowrap; /* Prevent wrapping of code */
-            text-align: left; /* Left align the code text */
+            overflow-wrap: break-word; /* Ensure long lines are wrapped */
         }
 
         .content-container {
@@ -150,26 +150,4 @@ data = {
     'app_id': HEAP_APP_ID,
     'identity': 'customer_id',
     'event': 'Purchase Completed',
-    'properties': {
-        'order_id': '123456',
-        'total_amount': '99.99'
-    }
-}
-
-response = requests.post(HEAP_API_URL, json=data)
-
-if response.status_code == 200:
-    print('Data successfully sent to Heap')
-else:
-    print('Error sending data:', response.text)
-            </code></pre>
-
-            <p>By sending event data to Heap, we can track key eCommerce actions like purchases, abandoned carts, and more in real-time.</p>
-
-            <h3>Conclusion</h3>
-            <p>Building a real-time eCommerce analytics pipeline allows businesses to stay agile and responsive to customer needs. By collecting, processing, and analyzing data in real-time, you can uncover insights that drive better decision-making and improve overall business performance.</p>
-        </div>
-    </div>
-
-</body>
-</html>
+    'propert
