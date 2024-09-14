@@ -29,14 +29,10 @@
             text-decoration: none;
             font-weight: bold;
         }
-        h1 {
-            text-align: center;
-            color: white;
-            padding-top: 50px;
-        }
         .hero {
             text-align: center;
             padding: 100px 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Gray background */
             color: white;
         }
         .hero h1 {
@@ -65,6 +61,13 @@
             display: none;
             color: white;
         }
+        .riddle-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Gray background for the riddle box */
+            padding: 30px;
+            border-radius: 10px;
+            width: 70%;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -80,17 +83,19 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Gray Background -->
     <div class="hero">
         <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
         <p>Technical Product Marketing, Analytics, and Data-Driven Solutions.</p>
     </div>
 
     <!-- Riddle Section -->
-    <div class="riddle-section">
-        <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
-        <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
-        <p id="answer">Focus, guided by the right expertise.</p>
+    <div class="riddle-container">
+        <div class="riddle-section">
+            <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+            <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
+            <p id="answer">Focus, guided by the right expertise.</p>
+        </div>
     </div>
 
 </body>
