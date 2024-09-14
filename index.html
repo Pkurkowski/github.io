@@ -3,27 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Kurkowski's Portfolio</title>
+    <title>Peter R. Kurkowski - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('images/home_background.jpg'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .riddle-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .riddle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-container {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #f5f5f5;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Peter Kurkowski's Portfolio</h1>
-    <nav>
-        <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="riddle-container">
+        <p class="riddle">"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+        
+        <div class="dropdown-container">
+            <button onclick="revealAnswer()">Reveal the Answer</button>
+            <div class="answer" id="answer">
+                <p>Focus, guided by the right expertise.</p>
+            </div>
+        </div>
+    </div>
 
-<section>
-    <h2>Welcome to My Portfolio</h2>
-    <p>Explore my work and experience in product marketing, competitive intelligence, and data analytics. Check out my projects and blog to learn more.</p>
-</section>
+    <script>
+        function revealAnswer() {
+            var answer = document.getElementById("answer");
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.classList.add("show");
+            } else {
+                answer.classList.remove("show");
+            }
+        }
+    </script>
 
 </body>
 </html>
