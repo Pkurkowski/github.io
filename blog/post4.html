@@ -80,6 +80,8 @@ The key is to transform timestamps into a consistent format like epoch time, whi
 
 An example SQL query might look like this:
 
+        <h3>Example SQL Query:</h3>
+        <pre><code>
 SELECT 
     u.userID, 
     u.signUpDate, 
@@ -95,6 +97,7 @@ JOIN
     userEvents e ON u.userID = e.userID
 WHERE 
     e.eventTime >= p.purchaseDate;
+        </code></pre>
 
 This query links the user data, purchase history, and event tracking tables using userID and ensures that only events that occurred after a purchase are analyzed. This kind of structured approach allows businesses to track how users behave after making a purchase, enabling them to measure user engagement with the product post-purchase.
 
