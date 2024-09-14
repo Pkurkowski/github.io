@@ -3,52 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter R. Kurkowski - Blogs</title>
+    <title>My Blog</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Add styling for the blog tiles */
+        .blog-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .blog-tile {
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blog-tile h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <nav>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../projects.html">Projects</a></li>
-      <li><a href="index.html">Blogs</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-    </ul>
-  </nav>
+    <h1>My Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="index.html">Blogs</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
-  <h1>My Blog</h1>
-</section>
+<section class="blog-grid">
+    <!-- Tile for Blog 1 -->
+    <a href="post1.html" class="blog-tile" style="background-image: url('../images/mountain_tile_1.jpg');">
+        <h3>eCommerce Analytics Pipeline</h3>
+    </a>
 
-<section class="blog-tiles">
-  <div class="tile">
-    <a href="post1.html">
-      <img src="../images/mountain_tile_1.jpg" alt="eCommerce Analytics Pipeline">
-      <h3>eCommerce Analytics Pipeline</h3>
+    <!-- Tile for Blog 2 -->
+    <a href="post2.html" class="blog-tile" style="background-image: url('../images/mountain_tile_2.jpg');">
+        <h3>Graph Database with Neo4j</h3>
     </a>
-  </div>
-  <div class="tile">
-    <a href="post2.html">
-      <img src="../images/mountain_tile_2.jpg" alt="Graph Database with Neo4j">
-      <h3>Graph Database with Neo4j</h3>
+
+    <!-- Tile for Blog 3 -->
+    <a href="post3.html" class="blog-tile" style="background-image: url('../images/mountain_tile_3.jpg');">
+        <h3>Data Warehousing & BI Dashboards</h3>
     </a>
-  </div>
-  <div class="tile">
-    <a href="post3.html">
-      <img src="../images/mountain_tile_3.jpg" alt="Data Warehousing & BI Dashboards">
-      <h3>Data Warehousing & BI Dashboards</h3>
+
+    <!-- Tile for Blog 4 -->
+    <a href="post4.html" class="blog-tile" style="background-image: url('../images/mountain_tile_4.jpg');">
+        <h3>Data Modeling for Product Analytics</h3>
     </a>
-  </div>
-  <div class="tile">
-    <a href="post4.html">
-      <img src="../images/mountain_tile_4.jpg" alt="Data Modeling for Product Analytics">
-      <h3>Data Modeling for Product Analytics</h3>
-    </a>
-  </div>
 </section>
 
 </body>
