@@ -5,22 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styling to center the iframe */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/magical_forest_scene.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Center the iframe for the PDF */
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        iframe {
+            border: none;
+            width: 80%;
+            height: 90%;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Resume</h1>
+    <h1>My Resume</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog/index.html">Blogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
         </ul>
     </nav>
 </header>
 
+<div class="pdf-container">
+    <iframe src="Peter Kurkowski Resume 2024.pdf"></iframe>
+</div>
 
 </body>
 </html>
-
