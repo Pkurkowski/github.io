@@ -10,11 +10,13 @@
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/home_background.jpg');
+            background-image: url('images/home_background.jpg'); /* Background image */
             background-size: cover;
             background-position: center;
             color: #ffffff;
             text-align: center;
+            height: 100vh;
+            background-repeat: no-repeat; /* Prevent background repetition */
         }
 
         /* Navigation Styles */
@@ -23,8 +25,12 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.8); /* Restore background transparency */
+            background-color: rgba(0, 0, 0, 0.8); /* Background transparency */
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul li {
@@ -40,75 +46,63 @@
         }
 
         nav ul li a:hover {
-            color: #4CAF50; /* Add hover effect */
+            color: #4CAF50;
         }
 
-        /* Hero Section */
         .hero {
-            margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 800px;
-            margin: 50px auto;
+            padding-top: 120px; /* Adjusted to avoid overlap with the navbar */
         }
 
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
-            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Darken background for better readability */
+            display: inline-block;
+            padding: 20px;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            color: #d1d1d1;
+            font-size: 1.2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 10px;
         }
 
-        /* Riddle Section */
         .riddle-container {
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 50px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            margin-top: 30px;
         }
 
         .riddle {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+            background-color: rgba(50, 50, 50, 0.85);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
         }
 
-        .dropdown-container {
-            margin-top: 20px;
-        }
-
-        button {
+        .riddle .answer {
+            display: none;
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: none;
+            padding: 10px;
+            margin-top: 10px;
             cursor: pointer;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
-        button:hover {
+        .riddle .reveal-btn {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .riddle .reveal-btn:hover {
             background-color: #45a049;
-        }
-
-        .answer {
-            display: none;
-            margin-top: 15px;
-            font-size: 1.2rem;
-            color: #f5f5f5;
-        }
-
-        .show {
-            display: block;
         }
     </style>
 </head>
@@ -119,40 +113,29 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog/post1.html">Blog</a></li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <div class="hero">
         <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
         <p>Technical Product Marketing, Analytics, and Data-Driven Solutions.</p>
-    </section>
+    </div>
 
     <!-- Riddle Section -->
-    <section class="riddle-container">
-        <p class="riddle">"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
-        
-        <div class="dropdown-container">
-            <button onclick="revealAnswer()">Reveal the Answer</button>
-            <div class="answer" id="answer">
-                <p>Focus, guided by the right expertise.</p>
-            </div>
+    <div class="riddle-container">
+        <div class="riddle">
+            <p>
+                "I am always present but often ignored. Businesses search for me when in chaos but 
+                neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"
+            </p>
+            <button class="reveal-btn" onclick="document.getElementById('answer').style.display='block'; this.style.display='none'">Reveal the Answer</button>
+            <p id="answer" class="answer">Focus, guided by the right expertise.</p>
         </div>
-    </section>
-
-    <script>
-        function revealAnswer() {
-            var answer = document.getElementById("answer");
-            if (answer.style.display === "none" || answer.style.display === "") {
-                answer.classList.add("show");
-            } else {
-                answer.classList.remove("show");
-            }
-        }
-    </script>
+    </div>
 
 </body>
 </html>
