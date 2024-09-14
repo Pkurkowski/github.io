@@ -6,7 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Add styling for the layout and riddle */
+        /* Styling for hero section and riddle */
         body {
             font-family: 'Georgia', serif;
             margin: 0;
@@ -18,8 +18,8 @@
         header {
             text-align: center;
             color: white;
-            padding: 80px 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+            padding: 100px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
@@ -35,7 +35,7 @@
 
         nav {
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Same as projects page */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 15px 0;
         }
 
@@ -56,7 +56,6 @@
             font-size: 1.2rem;
         }
 
-        /* Riddle block styling */
         .riddle-block {
             margin: 40px auto;
             padding: 30px;
@@ -89,15 +88,6 @@
             margin-top: 20px;
             font-size: 1.1rem;
         }
-        
-        /* Ensure content is centered */
-        .centered-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: calc(100vh - 100px); /* Adjusted height for better alignment */
-        }
 
     </style>
 </head>
@@ -118,13 +108,11 @@
     </ul>
 </nav>
 
-<section class="centered-content">
-    <div class="riddle-block">
-        <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
-        <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
-        <div class="riddle-answer" id="answer">
-            Focus, guided by the right expertise.
-        </div>
+<section class="riddle-block">
+    <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+    <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
+    <div class="riddle-answer" id="answer">
+        Focus, guided by the right expertise.
     </div>
 </section>
 
