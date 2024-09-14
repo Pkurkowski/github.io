@@ -3,111 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter R. Kurkowski - Portfolio</title>
+    <title>Peter R. Kurkowski's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('images/magical_forest_scene.jpg'); /* Background image */
+            font-family: Arial, sans-serif;
+            background-image: url('images/magical_forest_scene.jpg');
             background-size: cover;
             background-position: center;
-            color: #ffffff;
-            text-align: center;
-            height: 100vh;
-            background-repeat: no-repeat;
-        }
-
-        /* Navigation Styles */
-        nav ul {
-            list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.8); /* Background transparency */
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
         }
-
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
         nav ul li {
-            display: inline-block;
-            margin-right: 20px;
+            list-style: none;
+            margin: 0 15px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 10px;
+            font-weight: bold;
         }
-
-        nav ul li a:hover {
-            color: #4CAF50;
+        h1 {
+            text-align: center;
+            color: white;
+            padding-top: 50px;
         }
-
         .hero {
-            padding-top: 120px; /* Adjusted to avoid overlap with the navbar */
+            text-align: center;
+            padding: 100px 0;
+            color: white;
         }
-
-        .hero h1,
-        .hero p {
-            background-color: rgba(0, 0, 0, 0.7); /* Darken background for better readability */
-            display: inline-block;
-            padding: 20px;
-            width: 100%; /* Ensure the block stretches across the whole width */
-            box-sizing: border-box; /* Ensures padding is inside the width */
-            margin: 0; /* Remove margin to avoid gaps */
-        }
-
         .hero h1 {
             font-size: 3rem;
+            margin-bottom: 20px;
         }
-
         .hero p {
-            font-size: 1.2rem;
-            margin-top: -5px; /* Slight negative margin to close any space */
+            font-size: 1.5rem;
+            margin-bottom: 40px;
         }
-
-        .riddle-container {
-            margin-top: 30px;
+        .riddle-section {
+            text-align: center;
+            margin: 20px 0;
         }
-
-        .riddle {
-            background-color: rgba(50, 50, 50, 0.85);
+        .riddle-section button {
+            background-color: green;
             color: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        .riddle .answer {
-            display: none;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .riddle .reveal-btn {
-            background-color: #4CAF50;
-            border: none;
             padding: 10px 20px;
-            color: white;
-            font-size: 1rem;
+            font-size: 16px;
+            border: none;
             cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
         }
-
-        .riddle .reveal-btn:hover {
-            background-color: #45a049;
+        .riddle-section #answer {
+            margin-top: 20px;
+            font-size: 18px;
+            display: none;
+            color: white;
         }
     </style>
 </head>
@@ -131,15 +87,10 @@
     </div>
 
     <!-- Riddle Section -->
-    <div class="riddle-container">
-        <div class="riddle">
-            <p>
-                "I am always present but often ignored. Businesses search for me when in chaos but 
-                neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"
-            </p>
-            <button class="reveal-btn" onclick="document.getElementById('answer').style.display='block'; this.style.display='none'">Reveal the Answer</button>
-            <p id="answer" class="answer">Focus, guided by the right expertise.</p>
-        </div>
+    <div class="riddle-section">
+        <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+        <button onclick="document.getElementById('answer').style.display='block'">Reveal the Answer</button>
+        <p id="answer">Focus, guided by the right expertise.</p>
     </div>
 
 </body>
