@@ -3,74 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Adjust path if your CSS is elsewhere -->
     <style>
-        /* Add styling for the blog tiles */
-        .blog-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .blog-tile {
-            width: 300px;
-            height: 200px;
-            margin: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('../images/magical_forest_scene.jpg'); /* Background image */
             background-size: cover;
             background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
             display: flex;
             justify-content: center;
-            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
         }
-        .blog-tile h3 {
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+        nav ul li a {
             color: white;
-            font-size: 1.5rem;
-            font-family: 'Georgia', serif;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1 {
             text-align: center;
+            color: white;
+            padding-top: 50px;
+        }
+        .tile-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .tile {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            margin: 20px;
+            width: 250px;
+            height: 250px;
+        }
+        .tile img {
             width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .tile h3 {
+            color: white;
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>My Blog</h1>
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About Me</a></li>
             <li><a href="../projects.html">Projects</a></li>
+            <li><a href="index.html">Blogs</a></li> <!-- Links to this page -->
+            <li><a href="../about.html">About</a></li>
             <li><a href="../resume.html">Resume</a></li>
         </ul>
     </nav>
-</header>
 
-<section class="blog-grid">
-    <!-- Tile for Blog Post 1 -->
-    <a href="post1.html" class="blog-tile" style="background-image: url('../images/mountain_tile_1.jpg');">
-        <h3>eCommerce Analytics Pipeline</h3>
-    </a>
+    <!-- Blog Header -->
+    <h1>My Blog</h1>
 
-    <!-- Tile for Blog Post 2 -->
-    <a href="post2.html" class="blog-tile" style="background-image: url('../images/mountain_tile_2.jpg');">
-        <h3>Graph Databases with Neo4j</h3>
-    </a>
-
-    <!-- Tile for Blog Post 3 -->
-    <a href="post3.html" class="blog-tile" style="background-image: url('../images/mountain_tile_3.jpg');">
-        <h3>Data Warehousing & BI Dashboards</h3>
-    </a>
-
-    <!-- Tile for Blog Post 4 -->
-    <a href="post4.html" class="blog-tile" style="background-image: url('../images/mountain_tile_4.jpg');">
-        <h3>Data Modeling for Product Analytics</h3>
-    </a>
-</section>
+    <!-- Blog Tiles Section -->
+    <div class="tile-container">
+        <div class="tile">
+            <a href="post1.html">
+                <img src="../images/ecommerce_pipeline.jpg" alt="eCommerce Pipeline">
+                <h3>eCommerce Analytics Pipeline</h3>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="post2.html">
+                <img src="../images/graph_neo4j.jpg" alt="Graph Database with Neo4j">
+                <h3>Graph Database with Neo4j</h3>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="post3.html">
+                <img src="../images/data_warehousing_dashboard.jpg" alt="Data Warehousing & BI Dashboards">
+                <h3>Data Warehousing & BI Dashboards</h3>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="post4.html">
+                <img src="../images/data_modeling.jpg" alt="Data Modeling for Product Analytics">
+                <h3>Data Modeling for Product Analytics</h3>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
