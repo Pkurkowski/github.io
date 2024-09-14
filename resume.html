@@ -6,69 +6,25 @@
     <title>Resume</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Styling to center the iframe */
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            background: url('images/magical_forest_scene.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        header {
-            text-align: center;
-            color: white;
-            padding: 50px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        /* Center the iframe for the PDF */
+        /* Center the iframe and adjust its size */
         .pdf-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: url('images/magical_forest_scene.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
-
         iframe {
+            width: 70%; /* Adjust width as needed */
+            height: 90vh; /* Adjust height as needed */
             border: none;
-            width: 80%;
-            height: 90%;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>My Resume</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -80,9 +36,9 @@
     </nav>
 </header>
 
-<div class="pdf-container">
-    <iframe src="Peter Kurkowski Resume 2024.pdf"></iframe>
-</div>
+<section class="pdf-container">
+    <iframe src="Peter_Kurkowski_Resume_2024.pdf"></iframe>
+</section>
 
 </body>
 </html>
