@@ -9,6 +9,7 @@
         body {
             font-family: 'Georgia', serif; /* Elegant and readable font */
             background-color: #f5f5f5;
+            text-align: left; /* Ensure body text is left aligned */
         }
 
         .header {
@@ -39,7 +40,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             z-index: 1;
             position: relative;
-            text-align: left; /* Left-aligned text */
+            text-align: left; /* Force text to be left aligned */
         }
 
         .content p {
@@ -47,23 +48,32 @@
             line-height: 1.8;
             font-size: 1.1rem;
             margin-bottom: 20px; /* Added space between paragraphs */
+            text-align: left; /* Ensure paragraphs are left aligned */
         }
 
         h3 {
             font-weight: bold; 
-            color: black; /* Ensuring bold and black headers */
+            color: black; /* Ensure headers are bold and black */
         }
 
         pre, code {
-            background-color: #e6e6e6; /* Light gray background for code blocks */
+            background-color: #f0f0f0; /* Light gray background for code blocks */
             color: black; /* Black text for code */
             padding: 10px;
             border-radius: 4px;
-            overflow-x: auto; /* Ensure horizontal scroll if needed */
+            overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
             font-family: 'Courier New', monospace;
             font-size: 0.95rem;
             max-width: 100%; /* Ensure code block width fits within the page */
             white-space: pre-wrap; /* Preserve spaces and wrap lines */
+            word-wrap: break-word; /* Break long words if necessary */
+            text-align: left; /* Left align the code text */
+        }
+
+        .content-container {
+            display: block;
+            margin: auto;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -73,19 +83,20 @@
         <h1>Building a Real-Time eCommerce Analytics Pipeline</h1>
     </div>
 
-    <div class="content">
-        <p>In the world of eCommerce, understanding customer behavior is the key to driving growth. From tracking user activity to analyzing purchase patterns, a real-time eCommerce analytics pipeline is essential for staying ahead in today’s competitive landscape. By building a pipeline that collects and analyzes data in real-time, businesses can make data-driven decisions faster and more accurately.</p>
+    <div class="content-container">
+        <div class="content">
+            <p>In the world of eCommerce, understanding customer behavior is the key to driving growth. From tracking user activity to analyzing purchase patterns, a real-time eCommerce analytics pipeline is essential for staying ahead in today’s competitive landscape. By building a pipeline that collects and analyzes data in real-time, businesses can make data-driven decisions faster and more accurately.</p>
 
-        <p>This blog will walk you through building a robust, real-time eCommerce analytics pipeline using modern data tools. Our pipeline will pull data from Snowflake, process it, and then send it to analytics platforms like Heap or Amplitude for deeper analysis.</p>
+            <p>This blog will walk you through building a robust, real-time eCommerce analytics pipeline using modern data tools. Our pipeline will pull data from Snowflake, process it, and then send it to analytics platforms like Heap or Amplitude for deeper analysis.</p>
 
-        <p>Let’s dive into how we can build a flexible pipeline to handle eCommerce data efficiently.</p>
+            <p>Let’s dive into how we can build a flexible pipeline to handle eCommerce data efficiently.</p>
 
-        <h3>Step 1: Data Collection</h3>
-        <p>The first step in our pipeline is data collection. eCommerce platforms generate vast amounts of data every second, from user clicks to product views and purchases. We’ll use Snowflake to pull and store this raw data.</p>
+            <h3>Step 1: Data Collection</h3>
+            <p>The first step in our pipeline is data collection. eCommerce platforms generate vast amounts of data every second, from user clicks to product views and purchases. We’ll use Snowflake to pull and store this raw data.</p>
 
-        <p>Here’s an example of how to set up the initial data collection from Snowflake using SQL:</p>
+            <p>Here’s an example of how to set up the initial data collection from Snowflake using SQL:</p>
 
-        <pre><code>
+            <pre><code>
 -- Example SQL to pull order data from Snowflake
 SELECT 
     order_id, 
@@ -96,16 +107,16 @@ FROM
     ecommerce.orders 
 WHERE 
     order_date > current_date() - interval '30 days';
-        </code></pre>
+            </code></pre>
 
-        <p>In this step, we pull all orders from the past 30 days for analysis.</p>
+            <p>In this step, we pull all orders from the past 30 days for analysis.</p>
 
-        <h3>Step 2: Data Transformation</h3>
-        <p>Once we have the data collected, the next step is to transform it into a format that can be used for analytics. During this step, we’ll clean and standardize the data to ensure consistency across all analytics platforms.</p>
+            <h3>Step 2: Data Transformation</h3>
+            <p>Once we have the data collected, the next step is to transform it into a format that can be used for analytics. During this step, we’ll clean and standardize the data to ensure consistency across all analytics platforms.</p>
 
-        <p>Using Python, we can write a simple script to clean and process the data before sending it to Heap or Amplitude:</p>
+            <p>Using Python, we can write a simple script to clean and process the data before sending it to Heap or Amplitude:</p>
 
-        <pre><code>
+            <pre><code>
 # Python example for transforming eCommerce data
 import pandas as pd
 
@@ -120,16 +131,16 @@ df.columns = ['Order ID', 'Customer ID', 'Order Date', 'Total Amount']
 
 # Save the cleaned data to a new CSV file
 df.to_csv('cleaned_orders.csv', index=False)
-        </code></pre>
+            </code></pre>
 
-        <p>In this step, we’ve standardized the column names and ensured that the order dates are formatted correctly.</p>
+            <p>In this step, we’ve standardized the column names and ensured that the order dates are formatted correctly.</p>
 
-        <h3>Step 3: Loading Data into Analytics Tools</h3>
-        <p>After processing, we can load the cleaned data into analytics tools like Heap or Amplitude. These platforms allow businesses to perform in-depth analysis on user behavior, track events, and generate insights to optimize their eCommerce operations.</p>
+            <h3>Step 3: Loading Data into Analytics Tools</h3>
+            <p>After processing, we can load the cleaned data into analytics tools like Heap or Amplitude. These platforms allow businesses to perform in-depth analysis on user behavior, track events, and generate insights to optimize their eCommerce operations.</p>
 
-        <p>Here’s an example of sending data to Heap using their API:</p>
+            <p>Here’s an example of sending data to Heap using their API:</p>
 
-        <pre><code>
+            <pre><code>
 # Example code for sending data to Heap using the API
 import requests
 
@@ -152,13 +163,13 @@ if response.status_code == 200:
     print('Data successfully sent to Heap')
 else:
     print('Error sending data:', response.text)
-        </code></pre>
+            </code></pre>
 
-        <p>By sending event data to Heap, we can track key eCommerce actions like purchases, abandoned carts, and more in real-time.</p>
+            <p>By sending event data to Heap, we can track key eCommerce actions like purchases, abandoned carts, and more in real-time.</p>
 
-        <h3>Conclusion</h3>
-        <p>Building a real-time eCommerce analytics pipeline allows businesses to stay agile and responsive to customer needs. By collecting, processing, and analyzing data in real-time, you can uncover insights that drive better decision-making and improve overall business performance.</p>
-
+            <h3>Conclusion</h3>
+            <p>Building a real-time eCommerce analytics pipeline allows businesses to stay agile and responsive to customer needs. By collecting, processing, and analyzing data in real-time, you can uncover insights that drive better decision-making and improve overall business performance.</p>
+        </div>
     </div>
 
 </body>
