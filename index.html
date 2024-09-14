@@ -10,7 +10,7 @@
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/magical_forest_scene.jpg'); /* Background image */
+            background-image: url('images/home_background.jpg'); /* Background image */
             background-size: cover;
             background-position: center;
             color: #ffffff;
@@ -58,13 +58,17 @@
             background-color: rgba(0, 0, 0, 0.7); /* Darken background for better readability */
             display: inline-block;
             padding: 20px;
+            width: 100%; /* Ensure the block stretches across the whole width */
+            box-sizing: border-box; /* Ensures padding is inside the width */
         }
 
         .hero p {
             font-size: 1.2rem;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); 
             display: inline-block;
             padding: 10px;
+            width: 100%; /* Ensures the text below the title is aligned and centered */
+            box-sizing: border-box;
         }
 
         .riddle-container {
