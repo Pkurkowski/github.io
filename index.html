@@ -12,6 +12,7 @@
             height: 100%;
             font-family: 'Georgia', serif;
             color: white;
+            text-align: center;
         }
 
         /* Background image styling */
@@ -52,15 +53,14 @@
             font-size: 18px;
         }
 
-        /* Hero section */
+        /* Hero section styling */
         .hero {
+            margin-top: 60px; /* To ensure it's higher on the page */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding-top: 100px;
+            padding: 60px 0;
         }
 
         .hero h1 {
@@ -81,11 +81,11 @@
 
         /* Riddle section styling */
         .riddle-section {
+            margin-top: 40px; /* Just below the hero section */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 50px;
         }
 
         .riddle-box {
@@ -124,31 +124,27 @@
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog/index.html">Blogs</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-    </ul>
-</nav>
-
-<!-- Hero section -->
-<div class="hero">
-    <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
+<header>
+    <h1>Peter R. Kurkowski's Portfolio</h1>
     <h2>Technical Product Marketing, Analytics, and Data-Driven Solutions.</h2>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs/index.html">Blogs</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+</header>
 
 <!-- Riddle section -->
-<div class="riddle-section">
+<section class="riddle-section">
     <div class="riddle-box">
         <p>"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
         <button class="reveal-button" onclick="document.querySelector('.reveal-answer').style.display='block'">Reveal the Answer</button>
         <div class="reveal-answer">Focus, guided by the right expertise.</div>
     </div>
-</div>
+</section>
 
 </body>
 </html>
