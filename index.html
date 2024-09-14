@@ -8,17 +8,57 @@
     <style>
         body {
             font-family: 'Georgia', serif;
+            background-image: url('images/home_background.jpg');
             background-size: cover;
             background-position: center;
-            color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
         }
 
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Riddle Section */
         .riddle-container {
             background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
             padding: 20px;
             border-radius: 8px;
             max-width: 600px;
-            margin: 50px auto; /* Adjust spacing */
+            margin: 50px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
@@ -27,7 +67,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #ffffff;
         }
 
         .dropdown-container {
@@ -63,25 +102,32 @@
 </head>
 <body>
 
-    <!-- Your existing navigation bar and hero section -->
-    
-    <div class="main-content">
-        <!-- Other content like introduction, hero section, portfolio tiles, etc. -->
-        
-        <!-- Add the riddle here as a new section -->
-        <section class="riddle-container">
-            <p class="riddle">"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
-            
-            <div class="dropdown-container">
-                <button onclick="revealAnswer()">Reveal the Answer</button>
-                <div class="answer" id="answer">
-                    <p>Focus, guided by the right expertise.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <!-- More of your homepage content like blogs, contact info, etc. -->
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Peter R. Kurkowski's Portfolio</h1>
+        <p>Technical Product Marketing, Analytics, and Data-Driven Solutions.</p>
+    </section>
+
+    <!-- Riddle Section -->
+    <section class="riddle-container">
+        <p class="riddle">"I am always present but often ignored. Businesses search for me when in chaos but neglect me when things run smoothly. I am both a mindset and a method. Without me, growth is aimless. What am I?"</p>
+        
+        <div class="dropdown-container">
+            <button onclick="revealAnswer()">Reveal the Answer</button>
+            <div class="answer" id="answer">
+                <p>Focus, guided by the right expertise.</p>
+            </div>
+        </div>
+    </section>
 
     <script>
         function revealAnswer() {
