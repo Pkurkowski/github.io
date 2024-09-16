@@ -6,7 +6,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Styling for hero section and riddle */
         body {
             font-family: 'Georgia', serif;
             margin: 0;
@@ -22,38 +21,10 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header h2 {
-            font-size: 1.5rem;
-            font-weight: normal;
-            margin: 0;
-        }
-
         nav {
             text-align: center;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 15px 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
         }
 
         .riddle-block {
@@ -66,29 +37,74 @@
             text-align: center;
         }
 
-        .riddle-block p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+        /* Tree Styling */
+        .tree-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 40px auto;
         }
 
-        .riddle-block button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
+        .tree {
+            position: relative;
+            width: 100px;
+            height: 300px;
+            animation: growTree 5s forwards;
         }
 
-        .riddle-answer {
+        /* Animation for Tree Growth */
+        @keyframes growTree {
+            0% {
+                transform: scaleY(0.1);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        /* Birds flying out */
+        .bird {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
             display: none;
-            margin-top: 20px;
-            font-size: 1.1rem;
         }
 
+        .tree:hover .bird {
+            display: block;
+            animation: flyBird 2s forwards;
+        }
+
+        /* Bird flying animation */
+        @keyframes flyBird {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(200px, -100px);
+            }
+        }
+
+        /* Rustling leaves */
+        .tree:hover {
+            animation: rustleLeaves 0.5s ease;
+        }
+
+        @keyframes rustleLeaves {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-2deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,6 +131,18 @@
         Focus, guided by the right expertise.
     </div>
 </section>
+
+<!-- Interactive Trees Section -->
+<div class="tree-container">
+    <div class="tree">
+        <img src="images/conifer_tree.svg" alt="Conifer Tree">
+        <div class="bird" style="top: 50px; left: 50px;"></div>
+    </div>
+    <div class="tree">
+        <img src="images/conifer_tree.svg" alt="Conifer Tree">
+        <div class="bird" style="top: 80px; left: 20px;"></div>
+    </div>
+</div>
 
 </body>
 </html>
